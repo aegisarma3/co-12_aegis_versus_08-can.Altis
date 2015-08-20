@@ -1,0 +1,66 @@
+author = "Fuiba";
+
+// Overview:
+overviewText = "PMC Versus escapes the AAF pursuit.";
+overviewPicture = "overview_08.paa"; // Mission screenshot
+
+// Loading:
+onLoadName = "Canes Currunt"; // Mission name
+onLoadMission = "Escape the AAF pursuit and deliver the intel to the drop point.";
+loadScreen = "versuslogo.paa"; // Loading screen pip
+
+doneKeys[] = {"co10_pmcvcro08"};
+
+minScore=0;
+avgScore=1000;
+maxScore=14000;
+
+class CfgWorlds
+{
+		// Loading texts displayed on the bottom of the loading screen (picked randomly)
+		loadingTexts[]=
+		{
+			"PMC Versus was founded in 1997.",
+			"Stratis is of volcanic origin, with many rocks and crevices and Versus."
+		};
+};
+
+class Header
+{
+	gameType = Coop;
+	minPlayers = 1;
+	maxPlayers = 10;
+};
+
+class CfgDebriefing
+{  
+	class End1
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "PMC Versus escaped the AAF forces and delivered the intel. Corona will pick up the backpack shortly and decrypt the HD's contents. Hopefully PMC Versus will find something on it to further destabilize the Altian conditions.";
+	};
+};
+
+// Available at startup:
+class CfgWeapons 
+{
+	class hgun_mas_mak_F	{count = 2;};
+};
+	
+class CfgMagazines 
+{
+	class 8Rnd_mas_9x18_Mag		{count = 8;};
+
+};
+
+//--------------------------------------------------------------
+//------------------------AIS INJURY----------------------------
+//--------------------------------------------------------------
+class RscTitles {
+	#include "ais_injury\dialogs\rscTitlesAIS.hpp"
+};
+class CfgFunctions {
+	#include "ais_injury\cfgFunctionsAIS.hpp"
+};
+//--------------------------------------------------------------
